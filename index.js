@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = require('./settings/token.json');
+const settings = require('./settings/settings.json');
 const fs = require('fs');
 const { CommandHandler } = require('djs-commands');
 const CH = new CommandHandler({
@@ -35,4 +35,4 @@ client.on('message', (message) => {
   };
 });
 
-client.login(token.token);
+client.login(settings.token);
