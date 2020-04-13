@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 
-module.exports = class gis {
+module.exports = class img {
     constructor(){
             this.name = 'img',
             this.alias = ['image'],
             this.usage = '?img'
     }
 
-    async run(client, message, args) {
+    async run(client, message) {
       var gis = require('g-i-s');
       const filter = (reaction, user) => user.id === message.author.id &&(reaction.emoji.name === '⬅' || reaction.emoji.name === '➡');
       let page = 0
@@ -36,8 +36,9 @@ module.exports = class gis {
             }
           }
         });
+      };
 
-        async function generateReactions(msg){
+      async function generateReactions(msg){
           if(page+1 > 1 && page+1 <100){
             msg.react('⬅');
             setTimeout(function(){
@@ -51,9 +52,9 @@ module.exports = class gis {
           if(reactionTrigger !== 0){
               reactionCatcher(msg)
           }
-        }
+        };
 
-        async function updateImg(msg) {
+      async function updateImg(msg) {
           gis(search, logResults);
           function logResults(error, results) {
             if (error) {
@@ -88,9 +89,9 @@ module.exports = class gis {
             }
 
             }
-          }
-        }
+          };
         updateImg(null);
-      }
-}
+    }
+};
+
 //Thx for help soos pretty much copied all the functions will likely redo this later on but thank <3
