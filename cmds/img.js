@@ -1,37 +1,22 @@
 const Discord = require('discord.js');
 
-<<<<<<< HEAD
 module.exports = class img {
-=======
-module.exports = class gis {
->>>>>>> 027f4b3dfac76bbd7c87f727d0f930542b9cef26
     constructor(){
             this.name = 'img',
             this.alias = ['image'],
             this.usage = '?img'
     }
 
-<<<<<<< HEAD
     async run(client, message) {
       var gis = require('g-i-s');
       const filter = (reaction, user) => user.id === message.author.id &&(reaction.emoji.name === '⬅' || reaction.emoji.name === '➡');
-=======
-    async run(client, message, args) {
-      var gis = require('g-i-s');
-      const filter = (reaction, user) => user.id === message.author.id &&(reaction.emoji.name) === '⬅' || reaction.emoji.name === '➡');
->>>>>>> 027f4b3dfac76bbd7c87f727d0f930542b9cef26
       let page = 0
       let reactionTrigger = 0;
       let search = message.content.substring(message.content.indexOf(' ') + 1, message.content.length) || null;
       if(!search){
         return message.channel.send('You need to type something to seach for this command to work')
-<<<<<<< HEAD
       };
       async function reactionCatcher(msg){
-=======
-      }
-      async funtion reactionCatcher(msg){
->>>>>>> 027f4b3dfac76bbd7c87f727d0f930542b9cef26
         var clearReactions = setTimeout(function(){
           msg.clearReactions();
         }, 60000)
@@ -51,14 +36,8 @@ module.exports = class gis {
             }
           }
         });
-<<<<<<< HEAD
       };
-
-      async function generateReactions(msg){
-=======
-
         async function generateReactions(msg){
->>>>>>> 027f4b3dfac76bbd7c87f727d0f930542b9cef26
           if(page+1 > 1 && page+1 <100){
             msg.react('⬅');
             setTimeout(function(){
@@ -72,15 +51,9 @@ module.exports = class gis {
           if(reactionTrigger !== 0){
               reactionCatcher(msg)
           }
-<<<<<<< HEAD
         };
 
-      async function updateImg(msg) {
-=======
-        }
-
         async function updateImg(msg) {
->>>>>>> 027f4b3dfac76bbd7c87f727d0f930542b9cef26
           gis(search, logResults);
           function logResults(error, results) {
             if (error) {
@@ -115,17 +88,9 @@ module.exports = class gis {
             }
 
             }
-<<<<<<< HEAD
-          };
-        updateImg(null);
-    }
-};
-
-=======
           }
+          updateImg(null);
         }
-        updateImg(null);
-      }
-}
->>>>>>> 027f4b3dfac76bbd7c87f727d0f930542b9cef26
+      };
+
 //Thx for help soos pretty much copied all the functions will likely redo this later on but thank <3
