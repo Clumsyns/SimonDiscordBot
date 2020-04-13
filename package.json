@@ -1,0 +1,19 @@
+{
+  "name": "Simon",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "djs-commands": "^1.2.2",
+    "fs": "0.0.1-security",
+    "g-i-s": "^2.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
